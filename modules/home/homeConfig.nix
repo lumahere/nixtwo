@@ -1,0 +1,28 @@
+{
+  pkgs,
+  variables,
+  inputs,
+  ...
+}:
+{
+  imports = [ ]; # for home-manager settings
+  home-manager.useGlobalPkgs = true;
+  home-manager.useUserPackages = true;
+  home-manager.extraSpecialArgs = { inherit inputs; };
+  home-manager.backupFileExtension = "bak";
+
+  home-manager.users.${variables.username} = {
+
+    imports = [
+      ./packages.nix
+      ./niri
+    ]; # for home config
+    home.username = variables.username;
+    home.homeDirectory = "/home/${variables.username}";
+    home.stateVersion = "25.11";
+
+    programs.home-manager.enable = true;
+
+  };
+
+}
