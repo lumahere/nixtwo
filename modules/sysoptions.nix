@@ -10,6 +10,7 @@ in
     ./system/sddm.nix
     ./system/noctalia.nix
     ./system/gnome.nix
+    ./system/steam.nix
   ];
 
   options.sysconfig = {
