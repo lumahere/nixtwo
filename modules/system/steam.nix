@@ -1,14 +1,19 @@
-{config, lib, pkgs,variables,  ...}:
+{
+  config,
+  lib,
+  pkgs,
+  variables,
+  ...
+}:
 {
   config = lib.mkIf config.sysconfig.gaming.enable {
     programs.steam.enable = true;
 
-    environment.systemPackages = [pkgs.protonup-ng];
+    environment.systemPackages = [ pkgs.protonup-ng ];
     environment.sessionVariables = {
-      STEAM_EXTRA_COMPAT_TOOLS_PATHS = 
-        "/home/${variables.username}/.steam/.root/compatibilitytools.d";
+      STEAM_EXTRA_COMPAT_TOOLS_PATHS = "/home/${variables.username}/.steam/.root/compatibilitytools.d";
     };
     programs.xwayland.enable = true;
   };
-  
+
 }

@@ -1,6 +1,11 @@
 # A file containing toggles for modules / functionaltiy
 
-{ config, lib, variables, ... }:
+{
+  config,
+  lib,
+  variables,
+  ...
+}:
 let
   cfg = config.sysconfig;
 in
@@ -11,6 +16,7 @@ in
     ./system/noctalia.nix
     ./system/gnome.nix
     ./system/steam.nix
+    ./system/virtmanager.nix
   ];
 
   options.sysconfig = {
@@ -18,10 +24,14 @@ in
     gnome.enable = lib.mkEnableOption "enables gnome";
 
     gaming.enable = lib.mkEnableOption "enables lutris & steam";
+    virtmanager.enable = lib.mkEnableOption "enables virtmanager";
   };
   config = {
     home-manager.users.${variables.username} = {
-      imports = [./home/niriconf.nix ./home/lutris.nix];
+      imports = [
+        ./home/niriconf.nix
+        ./home/lutris.nix
+      ];
     };
   };
 }

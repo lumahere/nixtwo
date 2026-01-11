@@ -10,7 +10,7 @@
 
     programs.niri.enable = true;
     programs.niri.package = pkgs.niri;
-    environment.systemPackages = [pkgs.xwayland-satellite];
+    environment.systemPackages = [ pkgs.xwayland-satellite ];
   };
 
 }
