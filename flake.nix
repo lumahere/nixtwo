@@ -49,6 +49,7 @@
             niri.nixosModules.niri
             home-manager.nixosModules.home-manager
             ./modules/home
+            ./masterConfig.nix
           ];
         };
 

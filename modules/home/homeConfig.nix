@@ -15,7 +15,7 @@
 
     imports = [
       ./packages.nix
-      ./niri
+      ./niriconf.nix
     ]; # for home config
     home.username = variables.username;
     home.homeDirectory = "/home/${variables.username}";
