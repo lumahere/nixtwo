@@ -57,6 +57,7 @@
     {
       nixosConfigurations = {
         ${variables.hostname} = mkHost "mainPC" "x86_64-linux";
+        "lapbrw" = mkHost "lapbrw" "x86_64-linux";
       };
 
     };
