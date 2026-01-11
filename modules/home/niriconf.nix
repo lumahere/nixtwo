@@ -4,6 +4,7 @@
   pkgs,
   config,
   lib,
+  osConfig,
   ...
 }:
 let
@@ -16,7 +17,7 @@ let
 in
 {
 
-  config = lib.mkIf config.sysconfig.niri.enable {
+  config = lib.mkIf osConfig.sysconfig.niri.enable {
 
     programs.niri.config = [
       (plain "input" [

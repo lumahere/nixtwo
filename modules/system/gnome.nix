@@ -6,7 +6,7 @@
 }:
 
 {
-  config = mkIf config.sysconfig.gnome.enable {
+  config = lib.mkIf config.sysconfig.gnome.enable {
     services.displayManager.gdm.enable = true;
     services.desktopManager.gnome.enable = true;
 
