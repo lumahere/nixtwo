@@ -15,10 +15,12 @@ in
   options.sysconfig = {
     niri.enable = lib.mkEnableOption "enables niri config";
     gnome.enable = lib.mkEnableOption "enables gnome";
+
+    gaming.enable = lib.mkEnableOption "enables lutris & steam";
   };
   config = {
     home-manager.users.${variables.username} = {
-      imports = [./home/niriconf.nix];
+      imports = [./home/niriconf.nix ./home/lutris.nix];
     };
   };
 }

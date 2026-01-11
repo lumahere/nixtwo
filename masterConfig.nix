@@ -4,4 +4,5 @@
   imports = [./modules/sysoptions.nix];
 
   sysconfig.niri.enable = true;
+  sysconfig.gaming.enable = true;
 }
