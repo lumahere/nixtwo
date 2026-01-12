@@ -40,23 +40,23 @@
           specialArgs = {
             inherit inputs;
             inherit variables;
+            configModulesPath = ./modules;
           };
           modules = [
             ./hosts/common.nix
             ./hosts/${hostName}
             ./modules/system
             stylix.nixosModules.stylix
-            niri.nixosModules.niri
+            niri.homeModules.niri
             home-manager.nixosModules.home-manager
             ./modules/home
-            ./masterConfig.nix
           ];
         };
 
     in
     {
       nixosConfigurations = {
-        ${variables.hostname} = mkHost "mainPC" "x86_64-linux";
+        "mainpc" = mkHost "mainPC" "x86_64-linux";
         "lapbrw" = mkHost "lapbrw" "x86_64-linux";
       };
 
