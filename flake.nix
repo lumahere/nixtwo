@@ -47,7 +47,7 @@
             ./hosts/${hostName}
             ./modules/system
             stylix.nixosModules.stylix
-            niri.homeModules.niri
+            niri.nixosModules.niri
             home-manager.nixosModules.home-manager
             ./modules/home
           ];
