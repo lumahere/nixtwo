@@ -7,7 +7,6 @@
 
 {
   config = lib.mkIf config.sysconfig.gnome.enable {
-    services.displayManager.gdm.enable = true;
     services.desktopManager.gnome.enable = true;
 
     services.gnome.core-apps.enable = false;
@@ -17,6 +16,6 @@
       gnome-tour
       gnome-user-docs
     ];
-    environment.systemPackages = with pkgs; [ gnome-terminal ];
+    environment.systemPackages = with pkgs; [ nautilus gnome-terminal ];
   };
 }

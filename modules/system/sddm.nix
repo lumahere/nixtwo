@@ -6,7 +6,7 @@
 }:
 {
 
-  config = lib.mkIf config.sysconfig.niri.enable {
+  config = lib.mkIf (config.sysconfig.niri.enable && !config.sysconfig.gnome.enable) {
     services.displayManager.sddm = {
       enable = true;
       wayland.enable = true;

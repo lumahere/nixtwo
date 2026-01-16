@@ -4,6 +4,7 @@
   imports = [ "${configModulesPath}/sysoptions.nix" ];
 
   sysconfig.niri.enable = true;
+  sysconfig.gnome.enable = true;
   sysconfig.gaming.enable = true;
   sysconfig.virtmanager.enable = true;
 }
