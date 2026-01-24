@@ -13,6 +13,7 @@ in
   imports = [
     ./system/niri.nix
     ./system/sddm.nix
+    ./system/kde.nix
     ./system/noctalia.nix
     ./system/gnome.nix
     ./system/steam.nix
@@ -22,7 +23,7 @@ in
   options.sysconfig = {
     niri.enable = lib.mkEnableOption "enables niri config";
     gnome.enable = lib.mkEnableOption "enables gnome";
-
+    kde.enable = lib.mkEnableOption "enables kde";
     gaming.enable = lib.mkEnableOption "enables lutris & steam";
     virtmanager.enable = lib.mkEnableOption "enables virtmanager";
   };

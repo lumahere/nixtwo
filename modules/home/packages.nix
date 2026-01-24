@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    vscode
+    vscodium
     firefox
     alacritty
     fuzzel
