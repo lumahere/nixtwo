@@ -11,10 +11,6 @@
       url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    niri = {
-      url = "github:sodiboo/niri-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     noctalia = {
       url = "github:noctalia-dev/noctalia-shell";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -28,7 +24,6 @@
       nixpkgs,
       home-manager,
       stylix,
-      niri,
       noctalia,
     }@inputs:
     let
@@ -47,7 +42,6 @@
             ./hosts/${hostName}
             ./modules/system
             stylix.nixosModules.stylix
-            niri.nixosModules.niri
             home-manager.nixosModules.home-manager
             ./modules/home
           ];

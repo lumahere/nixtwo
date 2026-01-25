@@ -3,7 +3,6 @@
 {
   imports = [ "${configModulesPath}/sysoptions.nix" ];
 
-  sysconfig.niri.enable = true;
   sysconfig.kde.enable = true;
   sysconfig.gaming.enable = true;
   sysconfig.virtmanager.enable = true;

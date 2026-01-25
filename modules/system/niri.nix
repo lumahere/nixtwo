@@ -9,7 +9,6 @@
   config = lib.mkIf config.sysconfig.niri.enable {
 
     programs.niri.enable = true;
-    programs.niri.package = pkgs.niri;
     environment.systemPackages = [ pkgs.xwayland-satellite ];
   };
 
