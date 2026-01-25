@@ -1,6 +1,6 @@
 {
   pkgs,
-  variables,
+  variablesgt,
   inputs,
   ...
 }:
